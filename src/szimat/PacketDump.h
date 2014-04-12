@@ -220,5 +220,26 @@ private:
         // closes the file
         // so every single packet dump should open and close the file
         fclose(file);
+
+		        switch(packetOpcode) 
+        {
+        case 0x0D2A: // SMSG_LIST_INVENTORY
+		case 0x15B1: // PONG
+		case 0x0E2A: //SMSG query time response
+		case 0x1725: // object update
+		case 0x12D8: //smsg monster move
+		case 0x1CB2: // smsg playermove
+            return;
+        default:
+            break;
+        }
+
+
+		if (packetType == PacketType::PACKET_TYPE_C2S) printf("[Client] -> [S] : 0x %x \n", packetOpcode); else if (packetType == PacketType::PACKET_TYPE_S2C) printf("[Server] -> [C] : 0x %x \n", packetOpcode);
+
+
+
+
+
     }
 };

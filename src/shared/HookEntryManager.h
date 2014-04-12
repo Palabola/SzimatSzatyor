@@ -46,6 +46,13 @@
 #define WOW_MOP_17399   17399
 #define WOW_MOP_17538   17538
 #define WOW_MOP_17658   17658
+#define WOW_MOP_17688   17688
+#define WOW_MOP_17859   17859
+#define WOW_MOP_17889   17889
+#define WOW_MOP_17898   17898
+#define WOW_MOP_17930   17930
+#define WOW_MOP_17956   17956
+#define WOW_MOP_18019   18019
 
 // stores and manages hook entries
 // this will be compiled into a static lib
@@ -119,6 +126,13 @@ public:
         FillHookEntry17399();
         FillHookEntry17538();
         FillHookEntry17658();
+        FillHookEntry17688();
+        FillHookEntry17859();
+        FillHookEntry17889();
+        FillHookEntry17898();
+        FillHookEntry17930();
+        FillHookEntry17956();
+        FillHookEntry18019();
     }
 
     // returns true if hook entry exists for this specified build number
@@ -296,10 +310,59 @@ private:
     }
 
     // address offsets for MOP, 17658
-    static void FillHookEntry17658();
+    static void FillHookEntry17658()
     {
         HookEntry hookEntry17658 = HookEntry(0x3988D7, 0x3965BB);
         _hookEntryMap[WOW_MOP_17658] = hookEntry17658;
+    }
+
+    // address offsets for MOP, 17688
+    static void FillHookEntry17688()
+    {
+        HookEntry hookEntry17688 = HookEntry(0x3988D7, 0x3965BB);
+        _hookEntryMap[WOW_MOP_17688] = hookEntry17688;
+    }
+
+    // address offsets for MOP, 17859
+    static void FillHookEntry17859()
+    {
+        HookEntry hookEntry17859 = HookEntry(0x399711, 0x397559);
+        _hookEntryMap[WOW_MOP_17859] = hookEntry17859;
+    }
+
+    // address offsets for MOP, 17889
+    static void FillHookEntry17889()
+    {
+        HookEntry hookEntry17889 = HookEntry(0x399B6A, 0x3979B2);
+        _hookEntryMap[WOW_MOP_17889] = hookEntry17889;
+    }
+
+    // address offsets for MOP, 17898
+    static void FillHookEntry17898()
+    {
+        HookEntry hookEntry17898 = HookEntry(0x399B6A, 0x3979B2);
+        _hookEntryMap[WOW_MOP_17898] = hookEntry17898;
+    }
+
+    // address offsets for MOP, 17930
+    static void FillHookEntry17930()
+    {
+        HookEntry hookEntry17930 = HookEntry(0x39993E, 0x397786);
+        _hookEntryMap[WOW_MOP_17930] = hookEntry17930;
+    }
+
+    // address offsets for MOP, 17956
+    static void FillHookEntry17956()
+    {
+        HookEntry hookEntry17956 = HookEntry(0x39A66A, 0x398482);
+        _hookEntryMap[WOW_MOP_17956] = hookEntry17956;
+    }
+
+    // address offsets for MOP, 18019
+    static void FillHookEntry18019()
+    {
+        HookEntry hookEntry18019 = HookEntry(0x39A8E3, 0x3986FB);
+        _hookEntryMap[WOW_MOP_18019] = hookEntry18019;
     }
 
     // type for storing hook entries
